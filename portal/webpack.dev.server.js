@@ -8,7 +8,7 @@ module.exports = Object.assign(config, {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
         hot: true,
-        host: '10.1.108.41'
+        host: '0.0.0.0'
     }
 });
 
