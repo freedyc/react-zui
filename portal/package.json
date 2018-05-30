@@ -1,0 +1,27 @@
+{
+  "name": "portal",
+  "version": "1.0.0",
+  "description": "This is react portal.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js --progress -w",
+    "build": "webpack --config webpack.config.js --progress",
+    "dev": "webpack-dev-server --config webpack.dev.server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.11.0"
+  }
+}
