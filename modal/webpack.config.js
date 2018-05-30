@@ -23,7 +23,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['react', 'stage-0'],
+                        presets: ['env', 'react', 'stage-0'],
                         plugins: [
                             'check-es2015-constants',
                             'transform-runtime'

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: path.join(__dirname, 'example/index.js'),
@@ -12,7 +13,7 @@ module.exports = {
             'node_modules'
         ],
         alias: {
-            'src': path.resolve(__dirname, 'src') 
+            'src': path.resolve(__dirname, 'src')
         }
     },
     module: {
@@ -23,7 +24,14 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['react'],
+                        presets: [
+                            'env',
+                            'react'
+
+                        ],
+                        plugins: [
+                            'transform-es3-property-literals'
+                        ]
                     }
                 }
             }
@@ -33,6 +41,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'public/index.html',
             inject: true
+        }),
+        new UglifyWebpackPlugin({
+            uglifyOptions: {
+                ie8: true
+            }
         })
     ]
 }
