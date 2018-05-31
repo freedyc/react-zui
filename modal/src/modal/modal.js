@@ -64,7 +64,7 @@ class Modal extends Component {
         return (
             <Portal open={ open }>
                 <div>
-                    <ModalMask {...{showMask}}/>
+                    <ModalMask {...{showMask}} />
                     <ModalWrap {...{left, top, width, height, close}}>
                         <Header
                             updatePostions={ this.updatePostions }
@@ -87,14 +87,12 @@ class Modal extends Component {
 }
 
 const ModalMask = (props) => {
-    if(props.showMask) {
-        return (<div className="ddi-modal-mask"></div>)
-    }
-    return null;
+    const clazz = props.showMask ? 'ddi-modal-mask' : '';
+    return (<div className={clazz}></div>)
 }
 
 const ModalWrap = (props) => {
-    const  {
+    const {
         left,
         top,
         width,
@@ -110,6 +108,7 @@ const ModalWrap = (props) => {
         if(className !== clazz) return false;
         if(isClickWrap) close();
     }
+
     return (
         <div className={clazz} onClick={handleClick}>
             <div

@@ -1,8 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+require('babel-polyfill');
 module.exports = {
-    entry: path.join(__dirname, 'example/index.js'),
+    entry: [ 'babel-polyfill', path.join(__dirname, 'example/index.js') ],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'example.js'
@@ -25,8 +25,14 @@ module.exports = {
                     options: {
                         presets: ['env', 'react', 'stage-0'],
                         plugins: [
-                            'check-es2015-constants',
-                            'transform-runtime'
+                            'transform-es3-member-expression-literals',
+                            'transform-es3-property-literals',
+                            'transform-class-properties',
+                            'transform-runtime',
+                            'transform-react-constant-elements',
+                            'transform-react-inline-elements',
+                            'transform-react-jsx',
+                            'transform-es2015-arrow-functions'
                         ]
                     }
                 }
