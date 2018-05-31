@@ -1,12 +1,12 @@
 {
-  "name": "portal",
+  "name": "z-portal",
   "version": "0.1.0",
   "description": "This is react portal.",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --config webpack.dev.server.js", 
     "start": "webpack --config webpack.config.js --progress --watch",
-    "build": "webpack --config webpack.config.js --progress",
-    "dev": "webpack-dev-server --config webpack.dev.server.js"
+    "build": "webpack --config webpack.config.js --porgress"
   },
   "author": "dengyongchao",
   "license": "MIT",
