@@ -1,4 +1,4 @@
-import Portal from './portal';
+import Portal from 'z-portal';
 import React, { Component }  from 'react';
 import Header from './components/header';
 
@@ -47,7 +47,7 @@ class Modal extends Component {
         } = this.props;
 
         const { width, height } = size;
-        // api 
+        // api
         const  {
             showMask,
             drapHeader,

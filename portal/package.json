@@ -1,14 +1,21 @@
 {
   "name": "z-portal",
-  "version": "0.1.0",
-  "description": "This is react portal.",
+  "version": "0.1.2",
+  "description": "React portal.",
+  "keywords": [
+    "react",
+    "portal",
+    "component",
+    "tooltip",
+    "dialog"
+  ],
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.server.js", 
     "start": "webpack --config webpack.config.js --progress --watch",
     "build": "webpack --config webpack.config.js --porgress"
   },
-  "author": "dengyongchao",
+  "author": "dengyongchao<dengyognchao@126.com>",
   "license": "MIT",
   "dependencies": {
     "react": "^0.14.5",
